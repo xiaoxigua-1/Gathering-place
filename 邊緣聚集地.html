@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="vue.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="h.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://cdn.discordapp.com/icons/480000987306655744/93a289d52cbcb493bb10f937fe490fdf.webp?size=1024" />
+
+    <title>邊緣聚集地</title>
+</head>
+
+<body style="width: 100%;height: 100%;margin: 0px;padding: 0px;" id="body">
+
+    <!-- 上方選單 -->
+    <div style="background-color: aqua; height: 80px; width: 100%;">
+
+        <a id="home" href="./邊緣聚集地.html" style="text-decoration: none;" v-bind:title="message">
+
+            <div id="h2"><img class="h" src="https://cdn.discordapp.com/icons/480000987306655744/93a289d52cbcb493bb10f937fe490fdf.webp?size=1024"></div>
+            <span class="mes">邊緣聚集地</span>
+        </a>
+        <script type="text/javascript">
+            var app2 = new Vue({
+                el: '#home',
+                data: {
+                    message: '首頁'
+                }
+            })
+        </script>
+        <!-- 選項 -->
+        <div id="e" style="display: inline-block;">
+
+            <button class="mes2 h2" @click.prevent="changeView('Introduction')">簡介</button>
+            <button class="mes2 h2" @click.prevent="changeView('Current_situation')">現狀</button>
+
+            <button class="mes2 h2" @click.prevent="changeView('history')">歷史</button>
+
+        </div>
+    </div>
+    <!-- 內容 -->
+    <div class="content e" id="ff">
+        <div :is="view">
+
+        </div>
+
+    </div>
+    <script type="text/x-template" id="w">
+        <h1>幹甚麼東西</h1>
+    </script>
+    <script src="main.js"></script>
+
+
+</body>
+
+</html>
