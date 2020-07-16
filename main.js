@@ -3,25 +3,30 @@ var vm = new Vue({
     el: '#ff',
     data: {
         view: 'Introduction'
+
     },
 
     components: {
         Introduction: {
-            template: `<p>This is home.</p>`
+            template: "#Introduction"
         },
         history: {
-            template: `<p>This is posts.</p>`
+            template: "#history"
         },
         Current_situation: {
-            template: '#w'
+            template: '#Current_situation'
         }
     }
 });
+
+
 var app = new Vue({
     el: "#e",
     methods: {
         changeView(viewName) {
             vm.view = viewName
+
+
         }
     }
 })
